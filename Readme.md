@@ -1,0 +1,181 @@
+### Section 2: Refreshing Next Generation JavaScript (Optional)
+#### let & const
+* let - variable values
+
+```
+    let myName = 'Mac';
+    console.log(myName);
+
+    myName = 'Manu';
+    console.log(myName);
+
+    //--------out put------------
+    "Mac"
+    "Manu"
+
+```
+* const - constant values
+
+```
+    const myName2 = 'Mac2';
+    console.log(myName2);
+
+    myName2 = 'Manu2';
+    console.log(myName2);
+
+
+    //--------------out put-------------
+    "Mac2"
+    "error"
+    "TypeError: Assignment to constant variable.
+    at null.js:10:9
+    at https://static.jsbin.com/js/prod/runner-4.1.7.min.js:1:13924
+    at https://static.jsbin.com/js/prod/runner-4.1.7.min.js:1:10866"
+  ```
+
+
+#### Arrow Functions
+* Old function
+
+  ```
+  function printMyName(name){
+    console.log(name);
+  }
+  printMyName('Mac');
+  ```
+* New Arrow Function
+
+  ```
+  const printMyNameArrow = (name) => {
+    console.log(name);
+  }
+  printMyNameArrow('Mac');
+  ```
+
+#### Classes
+* Property
+* Method
+* Inheritance
+
+```
+class Human{
+  constructor(){
+    this.gender = 'Male';
+  }
+  printGender(){
+    console.log(this.gender)
+  }
+}
+class Person extends Human{
+  constructor(){
+    super();
+    this.name = 'Mac';
+  }
+  printMyName(){
+    console.log(this.name)
+  }
+}
+
+const person = new Person();
+person.printMyName();
+person.printGender();
+
+//---------------output------------
+"Mac"
+"Male"
+```
+#### Classes, Properties and Methods
+* with ES6/Babel
+
+```
+class Human{
+  gender = 'Male';  
+
+  printGender = () => {
+    console.log(this.gender)
+  }
+}
+class Person extends Human{   
+  name = 'Mac';
+
+  printMyName= () => {
+    console.log(this.name)
+  }
+}
+
+const person = new Person();
+person.printMyName();
+person.printGender();
+```
+
+####  The Spread & Rest Operator
+* Spread
+
+```
+const numbers = [1, 2, 3];
+const newNumbers = [...numbers, 4]; <-----
+
+console.log(newNumbers);
+
+const person = {
+  name: 'Mac'
+};
+const newPerson = {
+  ...person,                    <-----
+  age: '32'
+};
+
+console.log(newPerson);
+
+```
+
+
+* Rest
+
+```
+const filter = (...args) => {
+  return args.filter(el => el ===1);
+}
+
+console.log(filter(1, 2, 3));
+
+//---------------output------------
+[1]
+```
+
+#### Destructuring
+Easily extract array elements or object properties and store them in variables
+
+* Array Destructuring
+
+```
+const numbers = [1, 2, 3];
+[num1, , num3] = numbers;
+
+console.log(num1, num3);
+
+//---------------output------------
+1
+3
+```
+* Object Destructuring
+
+```
+{name} = {name: 'Mac',age: 28};
+
+console.log(name);//Mac
+console.log(age);//undefined
+```
+
+#### Refreshing Array Functions
+Not really next-gen JavaScript, but also important: JavaScript array functions like map() , filter() , reduce()  etc.
+```
+const numbers = [1, 2, 3];
+
+const doubleNumArray = numbers.map((num) => {
+  return num * 2;
+});
+
+console.log(numbers); // [1, 2, 3]
+console.log(doubleNumArray); // [2, 4, 6]
+```
