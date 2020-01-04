@@ -185,4 +185,4 @@ console.log(doubleNumArray); // [2, 4, 6]
 >>npm install create-react-app -g
 npx create-react-app  -g
 
-npx create-react-app react-complete-guide
+npx create-react-app react-complete-guide --script-version 1.1.5
