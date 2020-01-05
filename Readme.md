@@ -182,7 +182,12 @@ console.log(doubleNumArray); // [2, 4, 6]
 
 
 #### Using Create React App
->>npm install create-react-app -g
+>npm install create-react-app -g
+
 npx create-react-app  -g
 
 npx create-react-app react-complete-guide --script-version 1.1.5
+
+
+####  Handling Events with Methods
+https://reactjs.org/docs/events.html#supported-events

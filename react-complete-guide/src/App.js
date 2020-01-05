@@ -10,6 +10,9 @@ class App extends Component {
             {name: "Kyan", age: 1}
         ]
     }
+    switchNameHandler = () => {
+        console.log('was clicked!');
+    }
 
     render() {
         //This code will compile to
@@ -17,11 +20,9 @@ class App extends Component {
             <div className="App">
                 <h1>Hi Im React App</h1>
                 <p>This Also working</p>
-                <button>Switch Name</button>
+                <button onClick={this.switchNameHandler}>Switch Name</button>
                 <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
-                <p>This Also working</p>
                 <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>My Hobbies: Racing</Person>
-                <p>This Also working</p>
                 <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
             </div>
         );
