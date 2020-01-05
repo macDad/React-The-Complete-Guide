@@ -9,6 +9,10 @@ function App() {
             <h1>Hi Im React App</h1>
             <p>This Also working</p>
             <Person/>
+            <p>This Also working</p>
+            <Person/>
+            <p>This Also working</p>
+            <Person/>
         </div>
     );
     //this code -----> this is JSX
