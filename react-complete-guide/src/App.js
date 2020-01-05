@@ -8,11 +8,11 @@ function App() {
         <div className="App">
             <h1>Hi Im React App</h1>
             <p>This Also working</p>
-            <Person/>
+            <Person name="Mac" age="32"/>
             <p>This Also working</p>
-            <Person/>
+            <Person name="Paro" age="28">My Hobbies: Racing</Person>
             <p>This Also working</p>
-            <Person/>
+            <Person name="Kyan" age="1"/>
         </div>
     );
     //this code -----> this is JSX
