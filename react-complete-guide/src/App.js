@@ -13,8 +13,6 @@ const App = props => {
     });
     const [otherState, setOtherState] = useState('some other values');
 
-    console.log(personsState, otherState);
-
     const switchNameHandler = (newName) => {
         setPersonsState({
             persons: [
@@ -24,14 +22,28 @@ const App = props => {
             ]
         })
     };
+    const nameChangeHandler = (event) => {
+        setPersonsState({
+            persons: [
+                {name: 'Sample Dude', age: 20},
+                {name: event.target.value, age: 28},
+                {name: "Kyan", age: 1}
+            ]
+        })
+    };
 
     return (
         <div className="App">
             <h1>Hi Im React App</h1>
             <p>This Also working</p>
-            <button onClick={ () => {switchNameHandler('Maduka A J !!')}}>Switch Name</button>
+            <button onClick={() => {
+                switchNameHandler('Maduka A J !!')
+            }}>Switch Name
+            </button>
             <Person name={personsState.persons[0].name} age={personsState.persons[0].age}/>
-            <Person name={personsState.persons[1].name} age={personsState.persons[1].age} click={switchNameHandler.bind(this, 'Maduka A J R M')}>My Hobbies: Racing</Person>
+            <Person name={personsState.persons[1].name} age={personsState.persons[1].age}
+                    click={switchNameHandler.bind(this, 'Maduka A J R M')}
+                    changed={nameChangeHandler}>My Hobbies: Racing</Person>
             <Person name={personsState.persons[2].name} age={personsState.persons[2].age}/>
         </div>
     );
