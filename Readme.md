@@ -218,3 +218,18 @@ You can also avoid this by creating projects with the **right react-scripts vers
 ```
 > create-react-app my-app --scripts-version 1.1.5
 ```
+
+
+#### 46. Passing Method References Between Components
+
+Try to Use
+> bind
+
+```
+click={switchNameHandler.bind(this, 'XXXXXXX')}
+```
+instead of
+
+```
+onClick={ () => {switchNameHandler('XXXXXXX !!')}}
+```
