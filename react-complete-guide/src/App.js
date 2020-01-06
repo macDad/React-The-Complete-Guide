@@ -31,14 +31,21 @@ const App = props => {
             ]
         })
     };
-
+    const style = {
+        backgroundColor: 'white',
+        font: 'inherit',
+        border: '1px solid blue',
+        padding: '8px',
+        cursor: 'pointer'
+    };
     return (
         <div className="App">
             <h1>Hi Im React App</h1>
             <p>This Also working</p>
-            <button onClick={() => {
-                switchNameHandler('Maduka A J !!')
-            }}>Switch Name
+            <button style={style}
+                    onClick={() => {
+                        switchNameHandler('Maduka A J !!')
+                    }}>Switch Name
             </button>
             <Person name={personsState.persons[0].name} age={personsState.persons[0].age}/>
             <Person name={personsState.persons[1].name} age={personsState.persons[1].age}
