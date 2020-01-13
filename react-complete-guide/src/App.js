@@ -1,8 +1,21 @@
 import React, {useState} from 'react';
 import './App.css';
-import Radium, {StyleRoot} from "radium";
 import Person from './Person/Person';
+import styled from "styled-components";
 
+const StyledButton = styled.button`
+        background-color: green;
+        color: white;
+        font: inherit;
+        border: 1px solid blue;
+        padding: 8px;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: lightgreen;
+            color: black;
+        }
+        `;
 const App = props => {
 
     const [personsState, setPersonsState] = useState({
@@ -40,18 +53,6 @@ const App = props => {
         const doesShow = showPersons;
         setShowPersons(!doesShow);
     };
-    const style = {
-        backgroundColor: 'green',
-        color: 'white',
-        font: 'inherit',
-        border: '1px solid blue',
-        padding: '8px',
-        cursor: 'pointer',
-        ':hover': {
-            backgroundColor: 'lightgreen',
-            color: 'black'
-        }
-    };
     let persons = null;
     if (showPersons) {
         persons = (
@@ -65,11 +66,7 @@ const App = props => {
                 })}
             </div>
         );
-        style.backgroundColor = 'red';
-        style[':hover'] = {
-            backgroundColor: 'salmon',
-            color: 'black'
-        }
+
     }
 
     const classes = [];
@@ -81,19 +78,16 @@ const App = props => {
     }
 
     return (
-        <StyleRoot>
-            <div className="App">
-                <h1>Hi Im React App</h1>
-                <p className={classes.join(' ')}>This Also working</p>
-                <button style={style}
-                        onClick={togglePersonHandler}>Switch Name
-                </button>
-                {persons}
-            </div>
-        </StyleRoot>
+        <div className="App">
+            <h1>Hi Im React App</h1>
+            <p className={classes.join(' ')}>This Also working</p>
+            <StyledButton onClick={togglePersonHandler}>Switch Name
+            </StyledButton>
+            {persons}
+        </div>
     );
 };
 
-export default Radium(App);
+export default App;
 
 
