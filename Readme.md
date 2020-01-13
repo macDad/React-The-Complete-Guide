@@ -242,3 +242,29 @@ onClick={ () => {switchNameHandler('XXXXXXX !!')}}
 * Rendering Elements: https://reactjs.org/docs/rendering-elements.html
 * Components & Props: https://reactjs.org/docs/components-and-props.html
 * Listenable Events: https://reactjs.org/docs/events.html
+
+
+#### Assignment: Time to Practice - Lists & Conditionals
+>>> Useful Resources & Links
+
+Useful Resources & Links
+Conditional Rendering: https://reactjs.org/docs/conditional-rendering.html
+Lists & Keys: https://reactjs.org/docs/lists-and-keys.html
+
+#### 68. Adding and Using Radium
+Radium is a set of tools to manage inline styles on React elements. It gives you powerful styling capabilities without CSS.
+
+https://formidable.com/open-source/radium/
+
+```
+yarn add radium
+# or
+npm install --save radium
+```
+###### Features
+* Conceptually simple extension of normal inline styles
+* Browser state styles to support :hover, :focus, and :active
+* Media queries
+* Automatic vendor prefixing
+* Keyframes animation helper
+* ES6 class and createClass support
