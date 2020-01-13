@@ -40,7 +40,8 @@ const App = props => {
         setShowPersons(!doesShow);
     };
     const style = {
-        backgroundColor: 'white',
+        backgroundColor: 'green',
+        color: 'white',
         font: 'inherit',
         border: '1px solid blue',
         padding: '8px',
@@ -59,6 +60,7 @@ const App = props => {
                 })}
             </div>
         );
+        style.backgroundColor = 'red';
     }
     return (
         <div className="App">
