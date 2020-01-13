@@ -62,10 +62,19 @@ const App = props => {
         );
         style.backgroundColor = 'red';
     }
+
+    const classes = [];
+    if (personsState.persons.length <= 2) {
+        classes.push('red'); //classes = ['red']
+    }
+    if (personsState.persons.length <= 1) {
+        classes.push('bold');//classes = ['red', 'bold']
+    }
+
     return (
         <div className="App">
             <h1>Hi Im React App</h1>
-            <p>This Also working</p>
+            <p className={classes.join(' ')}>This Also working</p>
             <button style={style}
                     onClick={togglePersonHandler}>Switch Name
             </button>
