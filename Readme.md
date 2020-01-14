@@ -286,6 +286,12 @@ run
 ```
 npm run eject
 ```
+######  Why are you ejecting?
+
+There are 3 primary reasons why someone might choose to eject and each reason has either drawbacks or alternatives that should first be investigated.
+* _“I can manage the build on my own” or “I want full control over my project.”_
+* _“Create-React-App is missing a feature that I need, so I’m going to add it myself.”_
+* _“I’m curious about the build process and want to learn how it works.”_
 
 then change **webpack.config.js** file
 
@@ -314,3 +320,42 @@ above 3.0.0.
 	}
 }
 ```
+
+**For React latest version no need eject.**
+>Note: this feature is available with react-scripts@2.0.0 and higher.
+
+use `xxx.module.css`
+
+https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/
+
+##### Button.module.css
+
+```
+.error {
+  background-color: red;
+}
+```
+##### another-stylesheet.css
+```
+.error {
+  color: red;
+}
+```
+##### Button.js
+```
+import React, { Component } from 'react';
+import styles from './Button.module.css'; // Import css modules stylesheet as styles
+import './another-stylesheet.css'; // Import regular stylesheet
+class Button extends Component {
+  render() {
+    // reference as a js object
+    return <button className={styles.error}>Error Button</button>;
+  }
+}
+```
+
+***Useful Resources & Links***
+
+Using CSS Modules in create-react-app Projects: https://medium.com/nulogy/how-to-use-css-modules-with-create-react-app-9e44bec2b5c2
+
+More information about CSS Modules: https://github.com/css-modules/css-modules
