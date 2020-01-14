@@ -1,21 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import Person from './Person/Person';
-import styled from "styled-components";
 
-const StyledButton = styled.button`
-        background-color: ${props => props.alt ? 'red' : 'green'};
-        color: white;
-        font: inherit;
-        border: 1px solid blue;
-        padding: 8px;
-        cursor: pointer;
-        
-        &:hover {
-            background-color: ${props => props.alt ? 'salmon' : 'lightgreen'};
-            color: black;
-        }
-        `;
 const App = props => {
 
     const [personsState, setPersonsState] = useState({
@@ -81,8 +67,8 @@ const App = props => {
         <div className="App">
             <h1>Hi Im React App</h1>
             <p className={classes.join(' ')}>This Also working</p>
-            <StyledButton alt={showPersons} onClick={togglePersonHandler}>Switch Name
-            </StyledButton>
+            <button className={"button"} onClick={togglePersonHandler}>Switch Name
+            </button>
             {persons}
         </div>
     );
