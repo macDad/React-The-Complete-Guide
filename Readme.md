@@ -279,3 +279,38 @@ https://www.styled-components.com/
 ```
 npm install --save styled-components
 ```
+
+#### 73. Working with CSS Modules
+
+run
+```
+npm run eject
+```
+
+then change **webpack.config.js** file
+
+> Webpacker only supports ```css-loader``` versions greater than **2.1.1**, and less than **3.0.0**.
+
+Old config was:
+```
+{
+	loader: "css-loader",
+	options: {
+	    modules: true,
+	    localIdentName: "[name]__[local]___[hash:base64:5]",
+	    sourceMap: isDevelopment
+	}
+}
+```
+above 3.0.0.
+```
+{
+	loader: "css-loader",
+	options: {
+	    modules: {
+	        localIdentName: "[name]__[local]___[hash:base64:5]",
+	    },														
+	    sourceMap: isDevelopment
+	}
+}
+```
