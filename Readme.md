@@ -359,3 +359,24 @@ class Button extends Component {
 Using CSS Modules in create-react-app Projects: https://medium.com/nulogy/how-to-use-css-modules-with-create-react-app-9e44bec2b5c2
 
 More information about CSS Modules: https://github.com/css-modules/css-modules
+
+
+#### Section 6: Debugging React Apps
+##### 80. Working with the React Developer Tools
+
+https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
+
+###### 81. Using Error Boundaries (React 16+)
+
+```
+const rnd = Math.random();
+   if (rnd > 0.7) {
+       throw new Error('Something went wrong');
+   }
+```
+
+###### Useful Resources & Links
+
+* Error Boundaries: https://reactjs.org/docs/error-boundaries.html
+
+* Chrome Devtool Debugging: https://developers.google.com/web/tools/chrome-devtools/javascript/
