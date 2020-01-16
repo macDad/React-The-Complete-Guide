@@ -49,7 +49,8 @@ const App = props => {
     }
     return (
         <div className={classes.App}>
-            <Cockpit showPersons={showPersons}
+            <Cockpit title={props.appTitle}
+                     showPersons={showPersons}
                      persons={personsState.persons}
                      clicked={togglePersonHandler}/>
             {persons}

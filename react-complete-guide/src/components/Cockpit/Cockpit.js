@@ -5,7 +5,7 @@ const cockpit = (props) => {
     const assignedClasses = [];
 
     let btnClass = '';
-   if(props.showPersons) btnClass = classes.Red;
+    if (props.showPersons) btnClass = classes.Red;
 
     if (props.persons.length <= 2) {
         assignedClasses.push(classes.red); //classes = ['red']
@@ -16,12 +16,12 @@ const cockpit = (props) => {
 
     return (
         <div className={classes.Cockpit}>
-            <h1>Hi Im React App</h1>
+            <h1>{props.title}</h1>
             <p className={assignedClasses.join(' ')}>This Also working</p>
             <button className={btnClass} onClick={props.clicked}>Switch Name
             </button>
         </div>
     );
-}
+};
 
 export default cockpit;

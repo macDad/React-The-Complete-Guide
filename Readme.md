@@ -179,7 +179,9 @@ const doubleNumArray = numbers.map((num) => {
 console.log(numbers); // [1, 2, 3]
 console.log(doubleNumArray); // [2, 4, 6]
 ```
+#### React.js cheatsheet
 
+https://devhints.io/react
 
 #### Using Create React App
 >npm install create-react-app -g
