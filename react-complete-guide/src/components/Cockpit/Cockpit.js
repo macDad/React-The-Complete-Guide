@@ -10,8 +10,19 @@ const cockpit = (props) => {
         //HTTP request
         setTimeout(() => {
             alert('Saved data to cloud!');
-        }, 1000)
+        }, 1000);
+        return () => {
+            console.log('[Cockpit.js] cleanup work in useEffect');
+        };
     }, []);
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+        console.log('[Cockpit.js] 2nd useEffect');
+        return () => {
+            console.log('[Cockpit.js] cleanup work in 2nd useEffect');
+        };
+    });
     const assignedClasses = [];
     let btnClass = '';
     if (props.showPersons) {
