@@ -382,3 +382,9 @@ const rnd = Math.random();
 * Error Boundaries: https://reactjs.org/docs/error-boundaries.html
 
 * Chrome Devtool Debugging: https://developers.google.com/web/tools/chrome-devtools/javascript/
+
+
+#### 97. Using shouldComponentUpdate for Optimization
+javascript reference vs primitive values
+
+https://academind.com/learn/javascript/reference-vs-primitive-values/
