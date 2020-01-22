@@ -388,3 +388,14 @@ const rnd = Math.random();
 javascript reference vs primitive values
 
 https://academind.com/learn/javascript/reference-vs-primitive-values/
+
+
+#### 102. Rendering Adjacent JSX Elements
+
+Windows Users Must Read
+
+**On Windows**, the Aux.js  filename is not allowed in ZIP archives. Hence when extracting the attached source code, you might get prompted to rename the Aux.js  file. You might also **face difficulties creating an Aux folder** and Aux.js file.
+
+hoc ----> high order component.
+
+Aux.js ---->  for windows  Auxiliary.js
