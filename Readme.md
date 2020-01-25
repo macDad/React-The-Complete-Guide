@@ -409,7 +409,10 @@ import React, {Component, Fragment} from 'react';
 
 #### 110. Using Refs
 
-Class base ref
+__**Class base ref**__
+
+
+inputEl  
 
 ```
 componentDidMount() {
@@ -430,4 +433,21 @@ componentDidMount() {
 }
 
 <input ref={this.inputElementRef} />
+```
+
+__**Functional componane ref**__
+
+```
+const toggleBtnRef = useRef(null);
+
+useEffect(() => {
+      toggleBtnRef.current.click();
+    return () => {
+        console.log('[Cockpit.js] cleanup work in useEffect');
+    };
+}, []);
+
+<button ref={toggleBtnRef} className={btnClass}
+ onClick={props.clicked}>Toggle Persons</button>
+
 ```
