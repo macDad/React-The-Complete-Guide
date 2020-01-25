@@ -406,3 +406,28 @@ Can replace `<Auxiliary>` with ` <React.Fragment>` or ` <Fragment>` with
 ```
 import React, {Component, Fragment} from 'react';
 ```
+
+#### 110. Using Refs
+
+Class base ref
+
+```
+componentDidMount() {
+  this.inputElement.focus();
+}
+
+<input ref={(inputEl) => { this.inputElement = inputEl  }} />
+   ```
+constructor based
+
+```
+constructor(props) {
+    super(props);
+    this.inputElementRef = React.createRef();
+}
+componentDidMount() {
+    this.inputElementRef.current.focus();
+}
+
+<input ref={this.inputElementRef} />
+```
