@@ -451,3 +451,10 @@ useEffect(() => {
  onClick={props.clicked}>Toggle Persons</button>
 
 ```
+#### 114. contextType & useContext()
+
+```
+static contextType = AuthContext;
+```
+
+need to write **`contextType`** correctly.
