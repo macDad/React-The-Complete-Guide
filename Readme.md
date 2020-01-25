@@ -399,3 +399,10 @@ Windows Users Must Read
 hoc ----> high order component.
 
 Aux.js ---->  for windows  Auxiliary.js
+
+#### 104. Using React.Fragment
+
+Can replace `<Auxiliary>` with ` <React.Fragment>` or ` <Fragment>` with
+```
+import React, {Component, Fragment} from 'react';
+```
