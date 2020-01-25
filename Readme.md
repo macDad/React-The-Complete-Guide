@@ -179,7 +179,9 @@ const doubleNumArray = numbers.map((num) => {
 console.log(numbers); // [1, 2, 3]
 console.log(doubleNumArray); // [2, 4, 6]
 ```
+#### React.js cheatsheet
 
+https://devhints.io/react
 
 #### Using Create React App
 >npm install create-react-app -g
@@ -359,3 +361,116 @@ class Button extends Component {
 Using CSS Modules in create-react-app Projects: https://medium.com/nulogy/how-to-use-css-modules-with-create-react-app-9e44bec2b5c2
 
 More information about CSS Modules: https://github.com/css-modules/css-modules
+
+
+#### Section 6: Debugging React Apps
+##### 80. Working with the React Developer Tools
+
+https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
+
+###### 81. Using Error Boundaries (React 16+)
+
+```
+const rnd = Math.random();
+   if (rnd > 0.7) {
+       throw new Error('Something went wrong');
+   }
+```
+
+###### Useful Resources & Links
+
+* Error Boundaries: https://reactjs.org/docs/error-boundaries.html
+
+* Chrome Devtool Debugging: https://developers.google.com/web/tools/chrome-devtools/javascript/
+
+
+#### 97. Using shouldComponentUpdate for Optimization
+javascript reference vs primitive values
+
+https://academind.com/learn/javascript/reference-vs-primitive-values/
+
+
+#### 102. Rendering Adjacent JSX Elements
+
+Windows Users Must Read
+
+**On Windows**, the Aux.js  filename is not allowed in ZIP archives. Hence when extracting the attached source code, you might get prompted to rename the Aux.js  file. You might also **face difficulties creating an Aux folder** and Aux.js file.
+
+hoc ----> high order component.
+
+Aux.js ---->  for windows  Auxiliary.js
+
+#### 104. Using React.Fragment
+
+Can replace `<Auxiliary>` with ` <React.Fragment>` or ` <Fragment>` with
+```
+import React, {Component, Fragment} from 'react';
+```
+
+#### 110. Using Refs
+
+__**Class base ref**__
+
+
+inputEl  
+
+```
+componentDidMount() {
+  this.inputElement.focus();
+}
+
+<input ref={(inputEl) => { this.inputElement = inputEl  }} />
+   ```
+constructor based
+
+```
+constructor(props) {
+    super(props);
+    this.inputElementRef = React.createRef();
+}
+componentDidMount() {
+    this.inputElementRef.current.focus();
+}
+
+<input ref={this.inputElementRef} />
+```
+
+__**Functional componane ref**__
+
+```
+const toggleBtnRef = useRef(null);
+
+useEffect(() => {
+      toggleBtnRef.current.click();
+    return () => {
+        console.log('[Cockpit.js] cleanup work in useEffect');
+    };
+}, []);
+
+<button ref={toggleBtnRef} className={btnClass}
+ onClick={props.clicked}>Toggle Persons</button>
+
+```
+#### 114. contextType & useContext()
+
+```
+static contextType = AuthContext;
+```
+
+need to write **`contextType`** correctly.
+
+
+
+***Useful Resources & Links***
+
+>Useful Resources:
+
+* More on useEffect(): https://reactjs.org/docs/hooks-effect.html
+
+* State & Lifecycle: https://reactjs.org/docs/state-and-lifecycle.html
+
+* PropTypes: https://reactjs.org/docs/typechecking-with-proptypes.html
+
+* Higher Order Components: https://reactjs.org/docs/higher-order-components.html
+
+* Refs: https://reactjs.org/docs/refs-and-the-dom.html
