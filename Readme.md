@@ -491,3 +491,15 @@ need to write **`contextType`** correctly.
 
 * change fonts from
 https://fonts.google.com/?selection.family=Open+Sans:400,700
+
+
+#### Global constant
+
+```
+const INGREDIENT_PRICES = {
+    salad: 0.5,
+    bacon: 0.4
+}
+class BurgerBuilder extends Component {
+
+```
