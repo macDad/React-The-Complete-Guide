@@ -184,12 +184,22 @@ console.log(doubleNumArray); // [2, 4, 6]
 https://devhints.io/react
 
 #### Using Create React App
->npm install create-react-app -g
+> npm install create-react-app -g
 
-npx create-react-app  -g
+> npx create-react-app  -g
 
-npx create-react-app react-complete-guide --script-version 1.1.5
 
+> npx create-react-app react-complete-guide
+
+
+> npx create-react-app react-complete-guide --script-version 1.1.5
+
+-----------------------------
+
+>npm install --save prop-types
+
+
+------------------------------
 
 ####  Handling Events with Methods
 https://reactjs.org/docs/events.html#supported-events
@@ -474,3 +484,22 @@ need to write **`contextType`** correctly.
 * Higher Order Components: https://reactjs.org/docs/higher-order-components.html
 
 * Refs: https://reactjs.org/docs/refs-and-the-dom.html
+
+### Section 8: A Real App: The Burger Builder (Basic Version)
+
+#### 153. Setting up the Project
+
+* change fonts from
+https://fonts.google.com/?selection.family=Open+Sans:400,700
+
+
+#### Global constant
+
+```
+const INGREDIENT_PRICES = {
+    salad: 0.5,
+    bacon: 0.4
+}
+class BurgerBuilder extends Component {
+
+```
