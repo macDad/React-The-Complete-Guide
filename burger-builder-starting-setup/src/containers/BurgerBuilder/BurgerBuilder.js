@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Auxiliary from "../../hoc/Auxiliary";
+import Auxiliary from "../../hoc/Auxiliary/Auxiliary";
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from '../../components/UI/Modal/Modal'
@@ -67,13 +67,13 @@ class BurgerBuilder extends Component {
 
     purchaseHandler = () => {
         this.setState({purchasing: true});
-    }
+    };
     purchaseCancelHandler = () => {
         this.setState({purchasing: false});
-    }
+    };
     purchaseContinueHandler = () => {
         alert('you continue!')
-    }
+    };
 
     render() {
         const disabledInfo = {
