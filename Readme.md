@@ -503,3 +503,41 @@ const INGREDIENT_PRICES = {
 class BurgerBuilder extends Component {
 
 ```
+
+#### 191. Understanding our Project and   Introducing Axios
+
+Fake Online REST API for Testing and Prototyping
+
+https://jsonplaceholder.typicode.com/
+
+##### axios
+https://github.com/axios/axios
+
+Promise based HTTP client for the browser and node.js
+
+##### Features
+
+- Make [XMLHttpRequests](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) from the browser
+- Make [http](http://nodejs.org/api/http.html) requests from node.js
+- Supports the [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) API
+- Intercept request and response
+- Transform request and response data
+- Cancel requests
+- Automatic transforms for JSON data
+- Client side support for protecting against [XSRF](http://en.wikipedia.org/wiki/Cross-site_request_forgery)
+
+
+
+> npm install --save axios
+
+
+
+#### 202. Removing Interceptors
+
+Removing Interceptors
+
+You learned how to add an interceptor, getting rid of one is also easy. Simply store the reference to the interceptor in a variable and call `eject`  with that reference as an argument, to remove it (more info: https://github.com/axios/axios#interceptors):
+
+> var myInterceptor = axios.interceptors.request.use(function () {/*...*/});
+
+> axios.interceptors.request.eject(myInterceptor);
