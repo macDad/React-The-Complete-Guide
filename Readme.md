@@ -541,3 +541,9 @@ You learned how to add an interceptor, getting rid of one is also easy. Simply s
 > var myInterceptor = axios.interceptors.request.use(function () {/*...*/});
 
 > axios.interceptors.request.eject(myInterceptor);
+
+#### 208. Firebase & The Right Database
+
+The Firebase Database console - which we'll see in the next lecture - changed visually.
+
+**Important**: Make sure you pick the **Realtime Database**, NOT Firestore!
